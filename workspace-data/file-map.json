@@ -1,0 +1,47 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.6.0",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".gitignore",
+        "hash": "6147899740314209172"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "1880664178033616490"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "5673190821613406900"
+      },
+      {
+        "file": "README.md",
+        "hash": "3452914351264468111"
+      },
+      {
+        "file": "nx.json",
+        "hash": "14977852485590650733"
+      },
+      {
+        "file": "package.json",
+        "hash": "2959999986103938579"
+      },
+      {
+        "file": "packages/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "15805955733018343467"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "11096538227519865400"
+      }
+    ]
+  }
+}

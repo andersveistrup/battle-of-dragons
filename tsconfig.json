@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/battle-of-dragons"
+    },
+    {
+      "path": "./apps/dragons-api"
+    },
+    {
+      "path": "./libs/dragonTypes"
+    }
+  ]
+}
