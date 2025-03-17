@@ -8,12 +8,13 @@ export function BattleCard() {
   const { data: dragonsList, isLoading } = useGetTagsQuery();
   const [selectedDragon, setSelectedDragon] = useState<Dragon | null>(null);
 
-  const handleSelect = () => {
+  const handleSelect = (dragon: Dragon) => {
     console.log('handleSelect');
+    setSelectedDragon(dragon);
   };
 
   return (
-    <div className="w-full h-80 p-8 m-8 bg-green-400 rounded shadow-md flex flex-col items-center ">
+    <div className="w-full h-96 p-8 m-8 bg-green-400 rounded shadow-md flex flex-col items-center ">
       {!isLoading && dragonsList && (
         <DragonSelect
           handleSelect={handleSelect}
