@@ -29,7 +29,7 @@ export const dragonsData: Dragon[] = [
     level: 10,
     attack: 85,
     defense: 65,
-    health: 120,
+    health: 100,
     speed: 75,
     description:
       'A fierce dragon with scales as hot as the core of the earth. Its roar can melt mountains.',
@@ -41,7 +41,7 @@ export const dragonsData: Dragon[] = [
     level: 9,
     attack: 70,
     defense: 80,
-    health: 110,
+    health: 100,
     speed: 65,
     description:
       'Its breath can freeze entire lakes in seconds. Scales shimmer like diamonds in the sunlight.',
@@ -53,7 +53,7 @@ export const dragonsData: Dragon[] = [
     level: 11,
     attack: 90,
     defense: 95,
-    health: 150,
+    health: 100,
     speed: 50,
     description:
       'Ancient and wise, this dragons scales are made of living stone. It can merge with mountains for camouflage.',
@@ -77,7 +77,7 @@ export const dragonsData: Dragon[] = [
     level: 12,
     attack: 100,
     defense: 70,
-    health: 130,
+    health: 100,
     speed: 80,
     description:
       'This dragon melts into shadows at will. Its scales absorb light, making it nearly invisible at night.',
@@ -89,7 +89,7 @@ export const dragonsData: Dragon[] = [
     level: 11,
     attack: 75,
     defense: 85,
-    health: 120,
+    health: 100,
     speed: 85,
     description:
       'Scales glow with inner light. Legend says this dragon was born from a falling star.',
