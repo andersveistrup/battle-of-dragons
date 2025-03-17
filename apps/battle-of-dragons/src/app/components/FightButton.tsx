@@ -6,7 +6,7 @@ export function FightButton() {
   // const secondDragon = useAppSelector(selectSecondDragon);
 
   const handleFight = () => {
-    console.log('Fight', firstDragon);
+    console.log('Fight');
     // console.log('firstDragon: ', firstDragon);
     // console.log('secondDragon: ', secondDragon);
   };
