@@ -6,12 +6,17 @@ export function BattleArena() {
   const { data } = useGetTagsQuery();
 
   useEffect(() => {
-    console.log(data);
+    if (data) {
+      console.log(data);
+    }
   }, [data]);
 
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row justify-center items-center">
       <BattleCard></BattleCard>
+      <button className="p-2 h-8 rounded text-center bg-red-400 flex items-center justify-center">
+        Fight!!!
+      </button>
       <BattleCard></BattleCard>
     </div>
   );

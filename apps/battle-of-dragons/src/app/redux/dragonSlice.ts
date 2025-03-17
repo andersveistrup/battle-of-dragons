@@ -1,11 +1,13 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface DragonState {
-  value: string;
+  firstDragon: string | null;
+  secondDragon: string | null;
 }
 
 const initialState: DragonState = {
-  value: '0',
+  firstDragon: null,
+  secondDragon: null,
 };
 
 const dragonSlice = createSlice({
@@ -15,9 +17,17 @@ const dragonSlice = createSlice({
     reset: (state) => {
       state = initialState;
     },
+    setFirstDragon: (state, action: PayloadAction<string>) => {
+      state.firstDragon = action.payload;
+    },
+    setSecondDragon: (state, action: PayloadAction<string>) => {
+      state.secondDragon = action.payload;
+    },
   },
   selectors: {
-    selectDragon: (state: DragonState) => state,
+    selectDragonState: (state: DragonState) => state,
+    selectFirstDragon: (state: DragonState) => state.firstDragon,
+    selectSecondDragon: (state: DragonState) => state.secondDragon,
   },
 });
 
@@ -25,6 +35,6 @@ const dragonSlice = createSlice({
 export const { reset } = dragonSlice.actions;
 
 // selectors
-export const { selectDragon } = dragonSlice.selectors;
+export const { selectDragonState } = dragonSlice.selectors;
 
 export default dragonSlice.reducer;
