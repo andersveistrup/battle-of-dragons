@@ -1,13 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface DragonState {
-  firstDragon: string | null;
-  secondDragon: string | null;
+  firstDragonId: string | null;
+  secondDragonId: string | null;
 }
 
 const initialState: DragonState = {
-  firstDragon: null,
-  secondDragon: null,
+  firstDragonId: null,
+  secondDragonId: null,
 };
 
 const dragonSlice = createSlice({
@@ -18,23 +18,24 @@ const dragonSlice = createSlice({
       state = initialState;
     },
     setFirstDragon: (state, action: PayloadAction<string>) => {
-      state.firstDragon = action.payload;
+      state.firstDragonId = action.payload;
     },
     setSecondDragon: (state, action: PayloadAction<string>) => {
-      state.secondDragon = action.payload;
+      state.secondDragonId = action.payload;
     },
   },
   selectors: {
     selectDragonState: (state: DragonState) => state,
-    selectFirstDragon: (state: DragonState) => state.firstDragon,
-    selectSecondDragon: (state: DragonState) => state.secondDragon,
+    selectFirstDragon: (state: DragonState) => state.firstDragonId,
+    selectSecondDragon: (state: DragonState) => state.secondDragonId,
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { reset } = dragonSlice.actions;
+export const { reset, setFirstDragon, setSecondDragon } = dragonSlice.actions;
 
 // selectors
-export const { selectDragonState } = dragonSlice.selectors;
+export const { selectDragonState, selectFirstDragon, selectSecondDragon } =
+  dragonSlice.selectors;
 
 export default dragonSlice.reducer;

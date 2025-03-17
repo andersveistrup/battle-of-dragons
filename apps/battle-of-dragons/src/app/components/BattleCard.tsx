@@ -4,13 +4,19 @@ import DragonDetails from './DragonDetails';
 import DragonSelect from './DragonSelect';
 import { Dragon } from '../types';
 
-export function BattleCard() {
+export interface BattleCardProps {
+  readonly onSelect: (dragon: Dragon) => void;
+}
+
+export function BattleCard(props: BattleCardProps) {
+  const { onSelect } = props;
   const { data: dragonsList, isLoading } = useGetTagsQuery();
   const [selectedDragon, setSelectedDragon] = useState<Dragon | null>(null);
 
   const handleSelect = (dragon: Dragon) => {
     console.log('handleSelect');
     setSelectedDragon(dragon);
+    onSelect(dragon);
   };
 
   return (

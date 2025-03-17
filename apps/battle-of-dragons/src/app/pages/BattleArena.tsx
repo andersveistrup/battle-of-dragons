@@ -1,9 +1,13 @@
 import { useEffect } from 'react';
 import { useGetTagsQuery } from '../api/dragonsApi';
 import BattleCard from '../components/BattleCard';
+import { useAppDispatch } from '../redux/hooks';
+import { setFirstDragon, setSecondDragon } from '../redux/dragonSlice';
+import FightButton from '../components/FightButton';
 
 export function BattleArena() {
   const { data } = useGetTagsQuery();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (data) {
@@ -13,11 +17,17 @@ export function BattleArena() {
 
   return (
     <div className="flex flex-row justify-center items-center">
-      <BattleCard></BattleCard>
-      <button className="p-2 h-8 rounded text-center bg-red-400 flex items-center justify-center">
-        Fight!!!
-      </button>
-      <BattleCard></BattleCard>
+      <BattleCard
+        onSelect={(dragon) => {
+          dispatch(setFirstDragon(dragon.id));
+        }}
+      ></BattleCard>
+      <FightButton />
+      <BattleCard
+        onSelect={(dragon) => {
+          dispatch(setSecondDragon(dragon.id));
+        }}
+      ></BattleCard>
     </div>
   );
 }
