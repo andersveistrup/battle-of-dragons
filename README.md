@@ -3,7 +3,7 @@
 ## install
 
 ```sh
-pnpm i
+pnpm install
 ```
 
 ## Run app
@@ -11,11 +11,11 @@ pnpm i
 http://localhost:4200/
 
 ```sh
-nx serve battle-of-dragons/battle-of-dragons
+npx nx serve battle-of-dragons/battle-of-dragons
 ```
 
 ## Run API
 
 ```sh
-nx serve dragons-api
+npx nx serve dragons-api
 ```
